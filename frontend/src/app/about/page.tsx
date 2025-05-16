@@ -8,17 +8,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ROUTES } from "@/lib/routes"
 
 export const metadata: Metadata = {
-  title: "About | ContribHub",
-  description: "Learn about ContribHub's mission, vision, and the team behind the platform.",
+  title: "About | Code Sprint",
+  description: "Learn about Code Sprint's mission, vision, and the team behind the platform.",
 }
 
 export default function AboutPage() {
   return (
     <div className="container py-10 space-y-16">
       <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">About ContribHub</h1>
+        <h1 className="text-4xl font-bold tracking-tight">About Code Sprint</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          ContribHub is a platform that connects contributors with time-based contribution events, making it easy to
+          Code Sprint is a platform that connects contributors with time-based contribution events, making it easy to
           track impact and recognize valuable contributions.
         </p>
       </section>
@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="space-y-6">
           <h2 className="text-3xl font-bold">Our Mission</h2>
           <p className="text-lg text-muted-foreground">
-            ContribHub&apos;s mission is to make contribution accessible, measurable, and rewarding. We believe that everyone
+            Code Sprint&apos;s mission is to make contribution accessible, measurable, and rewarding. We believe that everyone
             has valuable skills to contribute, and we&apos;re building the tools to help people connect with meaningful
             opportunities and track their impact.
           </p>
@@ -37,13 +37,13 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="relative h-[400px] rounded-lg overflow-hidden border">
-          <Image src="/placeholder.svg?height=800&width=600" alt="ContribHub mission" fill className="object-cover" />
+          <Image src="/placeholder.svg?height=800&width=600" alt="Code Sprint mission" fill className="object-cover" />
         </div>
       </section>
 
       <section className="grid gap-12 md:grid-cols-2 items-center">
         <div className="relative h-[400px] rounded-lg overflow-hidden border md:order-1">
-          <Image src="/placeholder.svg?height=800&width=600" alt="ContribHub vision" fill className="object-cover" />
+          <Image src="/placeholder.svg?height=800&width=600" alt="Code Sprint vision" fill className="object-cover" />
         </div>
         <div className="space-y-6">
           <h2 className="text-3xl font-bold">Our Vision</h2>
@@ -53,7 +53,7 @@ export default function AboutPage() {
             engage with passionate contributors.
           </p>
           <p className="text-lg text-muted-foreground">
-            ContribHub aims to be the central hub for time-based contributions across various sectors, from open source
+            Code Sprint aims to be the central hub for time-based contributions across various sectors, from open source
             to nonprofits, education to community service.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function AboutPage() {
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">Our Values</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            These core values guide everything we do at ContribHub.
+            These core values guide everything we do at Code Sprint.
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export default function AboutPage() {
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">Our Team</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            ContribHub is built by a passionate team dedicated to making contribution accessible and impactful.
+            Code Sprint is built by a passionate team dedicated to making contribution accessible and impactful.
           </p>
         </div>
 
@@ -153,7 +153,7 @@ export default function AboutPage() {
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">Our Story</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The journey of ContribHub from idea to platform.
+            The journey of Code Sprint from idea to platform.
           </p>
         </div>
 
@@ -162,7 +162,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-xl font-bold mb-4">The Beginning</h3>
               <p className="text-muted-foreground mb-4">
-                ContribHub started as an idea in 2023 when our founders noticed a gap in how contributions were tracked
+                Code Sprint started as an idea in 2023 when our founders noticed a gap in how contributions were tracked
                 and recognized across different platforms and communities.
               </p>
               <p className="text-muted-foreground">
@@ -173,7 +173,7 @@ export default function AboutPage() {
             <div className="relative h-[300px] rounded-lg overflow-hidden border">
               <Image
                 src="/placeholder.svg?height=600&width=800"
-                alt="ContribHub beginnings"
+                alt="Code Sprint beginnings"
                 fill
                 className="object-cover"
               />
@@ -184,7 +184,7 @@ export default function AboutPage() {
             <div className="relative h-[300px] rounded-lg overflow-hidden border md:order-1">
               <Image
                 src="/placeholder.svg?height=600&width=800"
-                alt="ContribHub growth"
+                alt="Code Sprint growth"
                 fill
                 className="object-cover"
               />
@@ -192,7 +192,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Growth and Development</h3>
               <p className="text-muted-foreground mb-4">
-                After months of development and testing with early users, ContribHub launched its beta version in early
+                After months of development and testing with early users, Code Sprint launched its beta version in early
                 2024, focusing on open source and nonprofit sectors.
               </p>
               <p className="text-muted-foreground">
@@ -206,16 +206,16 @@ export default function AboutPage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Today and Beyond</h3>
               <p className="text-muted-foreground mb-4">
-                Today, ContribHub continues to grow and evolve, with new features and improvements based on feedback
+                Today, Code Sprint continues to grow and evolve, with new features and improvements based on feedback
                 from our community of contributors and organizers.
               </p>
               <p className="text-muted-foreground">
-                We're excited about the future of ContribHub and our mission to make contribution accessible,
+                We're excited about the future of Code Sprint and our mission to make contribution accessible,
                 measurable, and rewarding for everyone.
               </p>
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden border">
-              <Image src="/placeholder.svg?height=600&width=800" alt="ContribHub today" fill className="object-cover" />
+              <Image src="/placeholder.svg?height=600&width=800" alt="Code Sprint today" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
               <Globe className="h-12 w-12 text-primary" />
             </div>
           </div>
-          <h2 className="text-2xl font-bold">Join the ContribHub Community</h2>
+          <h2 className="text-2xl font-bold">Join the Code Sprint Community</h2>
           <p className="text-muted-foreground">
             Whether you're looking to contribute your skills, organize an event, or just learn more about time-based
             contributions, we'd love to have you as part of our community.

@@ -9,10 +9,9 @@ import { SiteFooter } from "@/components/site-footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ContribHub - Time-based Contribution Platform",
+  title: "Code Sprint - Time-based Contribution Platform",
   description:
-    "A collaborative platform for time-based contribution events, where participants can join sprints or hackathons to work on open-source projects, contribute impactful code, and earn rewards!",
-    generator: 'v0.dev'
+    "A collaborative platform for time-based contribution events, where participants can join sprints or hackathons to work on open-source projects, contribute impactful code, and earn rewards!"
 }
 
 export default function RootLayout({

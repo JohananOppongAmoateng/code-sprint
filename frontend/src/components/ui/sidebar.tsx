@@ -32,10 +32,8 @@ export function useSidebar() {
   return context
 }
 
-// Sidebar
-export interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function Sidebar({ className, children, ...props }: SidebarProps) {
+export function Sidebar({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   const { open } = useSidebar()
 
   return (
@@ -52,10 +50,8 @@ export function Sidebar({ className, children, ...props }: SidebarProps) {
   )
 }
 
-// Sidebar Header
-export interface SidebarHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarHeader({ className, children, ...props }: SidebarHeaderProps) {
+export function SidebarHeader({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   const { open } = useSidebar()
 
   return (
@@ -68,10 +64,8 @@ export function SidebarHeader({ className, children, ...props }: SidebarHeaderPr
   )
 }
 
-// Sidebar Content
-export interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarContent({ className, children, ...props }: SidebarContentProps) {
+export function SidebarContent({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement> ) {
   return (
     <div className={cn("flex-1 overflow-auto p-2", className)} {...props}>
       {children}
@@ -79,10 +73,9 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
   )
 }
 
-// Sidebar Footer
-export interface SidebarFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarFooter({ className, children, ...props }: SidebarFooterProps) {
+
+export function SidebarFooter({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("mt-auto p-2", className)} {...props}>
       {children}
@@ -90,10 +83,8 @@ export function SidebarFooter({ className, children, ...props }: SidebarFooterPr
   )
 }
 
-// Sidebar Group
-export interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {
+export function SidebarGroup({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("mb-4", className)} {...props}>
       {children}
@@ -101,10 +92,8 @@ export function SidebarGroup({ className, children, ...props }: SidebarGroupProp
   )
 }
 
-// Sidebar Group Label
-export interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarGroupLabel({ className, children, ...props }: SidebarGroupLabelProps) {
+export function SidebarGroupLabel({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   const { open } = useSidebar()
 
   if (!open) return null
@@ -116,10 +105,8 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
   )
 }
 
-// Sidebar Group Content
-export interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {
+export function SidebarGroupContent({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("space-y-1", className)} {...props}>
       {children}
@@ -127,10 +114,9 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
   )
 }
 
-// Sidebar Menu
-export interface SidebarMenuProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarMenu({ className, children, ...props }: SidebarMenuProps) {
+
+export function SidebarMenu({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("space-y-1", className)} {...props}>
       {children}
@@ -138,10 +124,9 @@ export function SidebarMenu({ className, children, ...props }: SidebarMenuProps)
   )
 }
 
-// Sidebar Menu Item
-export interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SidebarMenuItem({ className, children, ...props }: SidebarMenuItemProps) {
+
+export function SidebarMenuItem({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("", className)} {...props}>
       {children}
@@ -199,7 +184,7 @@ export const SidebarMenuButton = React.forwardRef<HTMLButtonElement, SidebarMenu
         {asChild ? (
           React.Children.map(children, (child) => {
             if (React.isValidElement(child)) {
-              return React.cloneElement(child as React.ReactElement<any>, {
+              return React.cloneElement(child as React.ReactElement<unknown>, {
                 className: cn(
                   "flex h-9 w-full items-center gap-2 rounded-md px-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
                   isActive && "bg-accent text-accent-foreground",
@@ -236,10 +221,9 @@ export function SidebarSeparator({ className }: React.HTMLAttributes<HTMLDivElem
   return <div className={cn("my-2 h-px bg-border", className)} />
 }
 
-// Sidebar Toggle
-export interface SidebarToggleProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export function SidebarToggle({ className, children, ...props }: SidebarToggleProps) {
+
+export function SidebarToggle({ className, children, ...props }:  React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const { open, setOpen } = useSidebar()
 
   return (

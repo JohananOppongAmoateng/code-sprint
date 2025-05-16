@@ -210,7 +210,7 @@ export default function AboutPage() {
                 from our community of contributors and organizers.
               </p>
               <p className="text-muted-foreground">
-                We're excited about the future of Code Sprint and our mission to make contribution accessible,
+                We&apos;re excited about the future of Code Sprint and our mission to make contribution accessible,
                 measurable, and rewarding for everyone.
               </p>
             </div>
@@ -230,8 +230,8 @@ export default function AboutPage() {
           </div>
           <h2 className="text-2xl font-bold">Join the Code Sprint Community</h2>
           <p className="text-muted-foreground">
-            Whether you're looking to contribute your skills, organize an event, or just learn more about time-based
-            contributions, we'd love to have you as part of our community.
+            Whether you&apos;re looking to contribute your skills, organize an event, or just learn more about time-based
+            contributions, we&apos;d love to have you as part of our community.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Award, Calendar, Clock, Code, Github, Globe, Target, Users } from "lucide-react"
+import { ArrowRight, Award, Calendar, Clock, Code, Github, Target, Users } from "lucide-react"
 import { Button } from "../components/ui/button"
 import Image from "next/image"
 

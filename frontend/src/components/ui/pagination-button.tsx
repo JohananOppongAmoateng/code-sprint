@@ -49,3 +49,11 @@ const PaginationLink = ({
     {...props}
   />
 )
+
+
+export {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+}

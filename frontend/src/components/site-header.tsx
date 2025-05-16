@@ -19,10 +19,7 @@ export function SiteHeader({ isLoggedIn = false, isOrganizer = false }: SiteHead
         <div className="flex items-center gap-2">
           <MobileNav />
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-              <span className="text-lg font-bold text-primary-foreground">CH</span>
-            </div>
-            <span className="text-lg font-semibold hidden md:inline-block">ContribHub</span>
+            <span className="text-lg font-semibold hidden md:inline-block">Code Sprint</span>
           </Link>
           <div className="hidden md:ml-6 md:flex">
             <MainNav />

@@ -69,7 +69,7 @@ export function MobileNav() {
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
               <span className="text-lg font-bold text-primary-foreground">TP</span>
             </div>
-            <span className="text-lg font-semibold">TimePledge</span>
+            <span className="text-lg font-semibold">Code Sprint</span>
           </Link>
         </div>
         <div className="mt-8 flex flex-col gap-4 px-7">

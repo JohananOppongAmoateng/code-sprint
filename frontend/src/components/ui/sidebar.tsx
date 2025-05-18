@@ -3,6 +3,7 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
+import { Slot } from "@radix-ui/react-slot"
 
 // Sidebar Provider
 interface SidebarContextValue {
@@ -163,57 +164,65 @@ const sidebarMenuButtonVariants = cva(
   },
 )
 
-export const SidebarMenuButton = React.forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(
-  ({ className, variant, isActive, asChild = false, tooltip, children, ...props }, ref) => {
-    const { open } = useSidebar()
-    const Comp = asChild ? React.Fragment : "button"
-    const childProps = asChild ? { className: "" } : {}
+export const SidebarMenuButton = React.forwardRef<
+  HTMLButtonElement,
+  SidebarMenuButtonProps
+>(({ asChild = false, children, variant, isActive, tooltip, className, ...props }, ref) => {
+  const { open } = useSidebar()
 
+  if (asChild) {
     return (
-      <Comp
-        ref={ref}
-        className={cn(
-          sidebarMenuButtonVariants({ variant, isActive }),
-          open ? "justify-start" : "justify-center",
-          className,
-        )}
-        title={!open ? tooltip : undefined}
-        {...childProps}
-        {...props}
-      >
-        {asChild ? (
-          React.Children.map(children, (child) => {
-            if (React.isValidElement(child)) {
-              return React.cloneElement(child as React.ReactElement<unknown>, {
-                className: cn(
-                  "flex h-9 w-full items-center gap-2 rounded-md px-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-                  isActive && "bg-accent text-accent-foreground",
-                  open ? "justify-start" : "justify-center",
-                ),
-                children: React.Children.map(child.props.children, (grandChild, index) => {
-                  if (index === 0 || open) {
-                    return grandChild
-                  }
-                  return null
-                }),
-              })
-            }
-            return child
-          })
-        ) : (
-          <>
-            {React.Children.map(children, (child, index) => {
-              if (index === 0 || open) {
-                return child
-              }
-              return null
-            })}
-          </>
-        )}
-      </Comp>
+      <>
+        {React.Children.map(children, (child) => {
+          if (!React.isValidElement(child)) return child
+          const element = child as React.ReactElement<any, any>
+
+          // collect only the first child (or all if open)
+          const filteredChildren = React.Children
+            .toArray(element.props.children)
+            .filter((_, i) => i === 0 || open)
+
+          return React.cloneElement(
+            element,
+            {
+              ref,
+              className: cn(
+                sidebarMenuButtonVariants({ variant, isActive }),
+                open ? "justify-start" : "justify-center",
+                className,
+              ),
+              title: !open ? tooltip : undefined,
+              ...props,
+            },
+            ...filteredChildren
+          )
+        })}
+      </>
     )
-  },
-)
+  }
+
+  return (
+    <button
+      ref={ref}
+      className={cn(
+        sidebarMenuButtonVariants({ variant, isActive }),
+        open ? "justify-start" : "justify-center",
+        className,
+      )}
+      title={!open ? tooltip : undefined}
+      {...props}
+    >
+      {React.Children.map(children, (child, i) =>
+        i === 0 || open ? child : null
+      )}
+    </button>
+  )
+})
+
+// SidebarMenuButton.displayName = "SidebarMenuButton"
+
+
+
 SidebarMenuButton.displayName = "SidebarMenuButton"
 
 // Sidebar Separator

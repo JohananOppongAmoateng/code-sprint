@@ -66,8 +66,6 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-pm.outputs.runner }} next build
 
-      - name: Export static site
-        run: ${{ steps.detect-pm.outputs.runner }} next export
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
